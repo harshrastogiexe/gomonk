@@ -1,8 +1,9 @@
 package gomonk_test
 
 import (
-	"gomonk"
 	"testing"
+
+	"github.com/harshrastogiexe/gomonk"
 )
 
 func TestNewPropertyErrorStore(t *testing.T) {
