@@ -18,13 +18,13 @@ rb.AddRuleFor("name", func(v *UserInfo, pe gomonk.PropertyError) {
     }
 
     if len(v.Name) < 3 {
-        pe["len"] = "length should be less than 3"
+        pe["len"] = "length should be more than or equal to 3"
     }
 })
 
 v := rb.Build()
 
-v.Validate(&UserInfo{
+result := v.Validate(&UserInfo{
     Name: "Harsh Rastogi",
     Age : 10
 })
